@@ -1,3 +1,11 @@
+Tasks:
+
+1. https://fakestoreapi.com/products/categories, https://fakestoreapi.com/products
+2. Filter products based on the categories using map method in js
+3. Filter the products based on the rating more than 4.0
+4. for the products insert the isCart flag and assign false
+5. sort the products based on the prices (lowest to highest and highest to lowest)
+
 README.md : This file acts like note pad for the application , Here we will mention project descriptions , How to run the project , Coding standards used in the project
 
 package.json : This file consists of project scripts and dependencies , From here we can check the versions of the dependencies, and scripts to run and test the application , This file is mandatory
