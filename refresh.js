@@ -1,121 +1,96 @@
-// 1. Let const
+// callbacks :
+// A function passed as argument to the another functions
 
-// function loop() {
-//   for (const i = 0; i < 10; i++) {
-//     console.log(i);
-//   }
+// ex: setTimeout
 
-//   console.log(i, "outside loops");
+// api call
+// use the data coming api call
+
+// function fetchData(callback) {
+//   setTimeout(() => {
+//     callback({
+//       dishName: "biryani",
+//       instructions: [
+//         "Onions in the dish",
+//         "masalas and spices should be added",
+//         "cook the rice and pour in the bowl",
+//       ],
+//     });
+//   }, 2000);
 // }
 
-// loop();
-
-// 2. Arrow functions :
-
-// function square(num) {
-//   return num * num;
+// function processData(dishData) {
+//   console.log(dishData);
 // }
-// square();
 
-// const arry = [1, 2, 3];
+// fetchData(processData);
 
-// const newArry = arry.map((num) => num * num);
-// console.log(newArry);
+//Producing code
 
-// const oddNumbers = arry.filter((num) => num % 2 !== 0);
+function fetchData() {
+  const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const response = {
+        data: {
+          dishName: "biryani",
+          instructions: [
+            "Onions in the dish",
+            "masalas and spices should be added",
+            "cook the rice and pour in the bowl",
+          ],
+        },
+        status: 1,
+      };
 
-// template literals
-// const user = {
-//   name: "siva",
-//   roll: 11,
-//   contact: {
-//     mobile: 9090,
-//   },
-//   mobile,
-// };
+      if (response.status) {
+        resolve(response.data);
+      } else {
+        reject(response.data.error);
+      }
+    }, 2000);
+  });
 
-// // user.roll = 22;
-// const propertyKey = "name";
-// const propertyValue = "dds";
-// user[propertyKey] = propertyValue;
+  return promise;
+}
 
-// const {
-//   name,
-//   roll,
-//   contact: { mobile: phoneNumber },
-// } = user;
+function processData(data) {
+  const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const eatingBiryani = true;
 
-// console.log(`hello ${name} ${phoneNumber}`);
+      if (eatingBiryani) {
+        resolve(`${data.dishName} is good, i have eaten ${data.dishName}`);
+      } else {
+        reject("i am not hungry");
+      }
+    }, 1000);
+  });
 
-// const arry = [1, 2, 3, 4];
+  return promise;
+}
 
-// const [first, ...rest] = arry;
-// console.log(rest);
+// state: pending, fulfil, reject
 
-// ternary operator
-// const isLogin = true;
+// consuming code
 
-// const isAdmin = true;
+// fetchData()
+//   .then((data) => processData(data))
+//   .then((data) => console.log(data))
+//   .catch((err) => console.log(err));
 
-// const flag = isLogin
-//   ? isAdmin
-//     ? "Welcome admin"
-//     : "Welcome user"
-//   : "please login";
+// fetch("https://dummyjson.com/recipes/1")
+//   .then((res) => res.json())
+//   .then((res) => console.log(res));
 
-// console.log(flag);
+// async and await
 
-// const username = "ram123";
-// const password = 123;
+const fetchServerData = async () => {
+  // const response = await fetch("https://dummyjson.com/recipes/1");
+  // const newResponse = await response.json();
+  const response = await fetchData();
 
-// const userInfo = {
-//   username,
-//   password,
-// };
+  const newResponse = await processData(response);
 
-// console.log(userInfo);
-
-const kitchenItems = [
-  {
-    name: "onion",
-    isFruit: false,
-    qty: 10,
-    price: 200,
-  },
-  {
-    name: "watermelon",
-    isFruit: true,
-    qty: 4,
-    price: 20,
-  },
-  {
-    name: "Potatoe",
-    isFruit: false,
-    qty: 6,
-    price: 10,
-  },
-  {
-    name: "green Leaves",
-    isFruit: false,
-    qty: 6,
-    price: 5,
-  },
-  {
-    name: "Apple",
-    isFruit: true,
-    qty: 7,
-    price: 300,
-  },
-];
-
-const totalCost = kitchenItems
-  .filter((eachFruit) => !eachFruit.isFruit && eachFruit.price <= 50)
-  .reduce((total, eachVegetable) => total + eachVegetable.price, 0);
-
-console.log(
-  `The total cost of the vegetables which price is less than 50 is ${totalCost} rupees`
-);
-
-// vegetableList.map((eachVeggy) => console.log(eachVeggy.name));
-
-// I need total price of vegetables which is less than 50 rupees
+  console.log(newResponse);
+};
+fetchServerData();
