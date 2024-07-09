@@ -1,32 +1,62 @@
-Tasks:
+React apps build by using components
 
-1. https://fakestoreapi.com/products/categories, https://fakestoreapi.com/products
-2. Filter products based on the categories using map method in js
-3. Filter the products based on the rating more than 4.0
-4. for the products insert the isCart flag and assign false
-5. sort the products based on the prices (lowest to highest and highest to lowest)
+Components : Component is the independent reuable bits of code which is responsible for USER INTERFACES
+Every component must start with the capital
+Component can be as small as button or as large as screen
+Components can be created by 2 ways
 
-README.md : This file acts like note pad for the application , Here we will mention project descriptions , How to run the project , Coding standards used in the project
+1. class based components
+2. funtional based components
 
-package.json : This file consists of project scripts and dependencies , From here we can check the versions of the dependencies, and scripts to run and test the application , This file is mandatory
+note : while creating new components , its always suggestable to use funtional based components
 
-package-lock.json : This file holds the versioning information of the dependencies used , This helps us to run the app consistently accross different systems
+React 2013 - 2018 : class based components (dynamic websites),funtional based components (static websites)
 
-npm install -> This command installs the dependencies of the project (it creates the node modules and package-lock.json)
+2018 (Hooks) : funtional based components (dynamic websites + static websites)
 
-.gitignore: This file blocks the files or folders not to track in the git
+components will be nested to form the UI
+every component returns the markup(html)
 
-src : Code working directory , we will this folder all the time to write all UI components
+App.js is the root component in the react application
 
-node_modules : node_modules contains the all the dependency codes required for our project , it occupies majority of react app size (we will prevent node modules changes for tracking in git)
+In React we can have 3 extensions for the components
 
-React is only used for desigining the single page applications (only content will be changed inside the html file)
+1. .js (which represents the javascript files)
+2. .jsx (this represents react jsx file)
+3. .tsx (this represents the typescript files)
 
-App.js - Root component of react application =
+Every file can contains as many components
 
-Tasks:
+exports :
 
-1. Repeat the class
-2. Prepare the document for folder structure for CRA
-3. ES6 Revise and create a file for it
-4. Push the code to git by today's date
+1. Named export :
+   add export keyword at the beginning of the component
+   imports can be done using curly based
+   we can take multiple named exports in a single file
+   for named imports , we can use other name of components by using as key word
+2. Default export
+   add export default keyword at the end of the component
+   imports can be done directly
+   we can only take single export default in a file
+   we can use any name , but it should start from capital letter
+
+   DRY : DON'T REPEAT YOURSELF
+   Always try to reuse the code instead of duplicating
+
+   JSX : Javascript and XML - Language syntax followed by the react where js funtions can return the markup language
+
+Browswer does't understand JSX , Babel is a tool which transpiles JSX code to the browser understandable code (js code)
+
+Topics:
+
+1. Components in react
+2. Types of Components
+3. Imports/Exports
+4. Nesting of Components
+
+Tasks :
+
+1. Repeat the class (learn syntax)
+2. Create a few custom components like Table, Cards
+3. Explore the react official docs https://react.dev/learn/your-first-component
+4. Explore the react official docs regarding exports / imports https://react.dev/learn/importing-and-exporting-components
