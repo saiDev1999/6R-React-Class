@@ -1,62 +1,83 @@
-React apps build by using components
+JSX :
+JSX : Javascript and XML - Language syntax followed by the react where js funtions can return the markup language
 
-Components : Component is the independent reuable bits of code which is responsible for USER INTERFACES
-Every component must start with the capital
-Component can be as small as button or as large as screen
-Components can be created by 2 ways
+Rules of JSX :
 
-1. class based components
-2. funtional based components
+1. Every Component must return single parent element (this must be shared container like div,section,ol or React.Fragments)
+2. Class must be replaced with the className
+3. Every js code inside the return must be enclosed with the curly braces
+4. every attribute must be in camelCase
 
-note : while creating new components , its always suggestable to use funtional based components
+React.Fragments: It acts like a shared empty parent container with out including of extra shared nodes in the dom
 
-React 2013 - 2018 : class based components (dynamic websites),funtional based components (static websites)
+They are 2 ways to include the Fragments
 
-2018 (Hooks) : funtional based components (dynamic websites + static websites)
+1. <></>
+2. <React.Fragment></React.Fragment>
 
-components will be nested to form the UI
-every component returns the markup(html)
+note : Efficient rendering will be possible using fragments
 
-App.js is the root component in the react application
+List rendering in react :
+Whenever if we want to display the list items(array), we will use the map method
+map method will iterates the UI parts
 
-In React we can have 3 extensions for the components
+ex: const fruits=["apple","banana","watermelon]
 
-1. .js (which represents the javascript files)
-2. .jsx (this represents react jsx file)
-3. .tsx (this represents the typescript files)
+fruits.map(eachFruit=>console.log(eachFruit))
 
-Every file can contains as many components
+note : React is completely declarative syntax , we dont need to use dom methods
+we will specify directly what we want
 
-exports :
+key prop :
 
-1. Named export :
-   add export keyword at the beginning of the component
-   imports can be done using curly based
-   we can take multiple named exports in a single file
-   for named imports , we can use other name of components by using as key word
-2. Default export
-   add export default keyword at the end of the component
-   imports can be done directly
-   we can only take single export default in a file
-   we can use any name , but it should start from capital letter
+whenever we are using map method , we must always include key prop
+key prop will make repeated UI elements to render efficiently ,
+By using this updates and deletions were must faster
 
-   DRY : DON'T REPEAT YOURSELF
-   Always try to reuse the code instead of duplicating
+<img src="" alt=" >
 
-   JSX : Javascript and XML - Language syntax followed by the react where js funtions can return the markup language
+<ImageComponent  path=""  alternateText="" width=""  >
 
-Browswer does't understand JSX , Babel is a tool which transpiles JSX code to the browser understandable code (js code)
+Render Props in react :
+
+Props is an object , which helps us to communicate or share data from parent component to the child component
+
+Props are the additional information passed to the component
+
+<ImageComponent  path=""  alternateText="" width=""  >
+
+Props are immutable (we cannot change over the time)
+
+Props allows us to render the content dynamically , we can control the layout of the UI components
+
+We can take more than one prop for the component
+
+<ButtonComponent   text="login"  width="100px"  >
+<ButtonComponent   text="signup" width="120px"   >
+
+2 ways to use props:
+
+1. General prop
+2. Children prop
 
 Topics:
 
-1. Components in react
-2. Types of Components
-3. Imports/Exports
-4. Nesting of Components
+1. JSX and JSX rules
+2. List raendering in react
+3. Fragments
+4. Key Prop in map
+5. Render Props or PROPS
 
 Tasks :
 
-1. Repeat the class (learn syntax)
-2. Create a few custom components like Table, Cards
-3. Explore the react official docs https://react.dev/learn/your-first-component
-4. Explore the react official docs regarding exports / imports https://react.dev/learn/importing-and-exporting-components
+1. Repeat the class
+2. IPL teams listing using map method , Props in react
+3. React https://react.dev/learn/writing-markup-with-jsx
+4. https://react.dev/learn/javascript-in-jsx-with-curly-braces
+5. https://react.dev/learn/passing-props-to-a-component
+
+6. What is props in a React component ?
+7. How do you access props in a React component ?
+8. What data types can we pass as props to components ?
+9. What is a propTypes?
+10. What is a default propTypes?

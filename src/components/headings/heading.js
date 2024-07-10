@@ -1,5 +1,6 @@
-const Heading1 = () => {
-  return <h1>Ram</h1>;
+const Heading1 = (prop) => {
+  const { title = "default" } = prop;
+  return <h1>{title}</h1>;
 };
 export default Heading1;
 export const Heading2 = () => {

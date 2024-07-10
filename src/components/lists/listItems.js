@@ -1,11 +1,12 @@
+import { fruits } from "./fruitData";
+
 const ListItems = () => {
   return (
-    <div>
-      <li>Apple</li>
-      <li>Banana</li>
-      <li>Watermelon</li>
-      <li>Kiwi</li>
-    </div>
+    <>
+      {fruits.map((eachFruit) => (
+        <li key={eachFruit.id}>{eachFruit.name}</li>
+      ))}
+    </>
   );
 };
 

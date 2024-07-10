@@ -1,10 +1,12 @@
-const CustomImage = () => {
+const CustomImage = (prop) => {
+  const { source, altText, width, height } = prop;
   return (
     <img
-      src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
-      alt="bag"
-      width={100}
-      height={100}
+      class="image"
+      src={source}
+      alt={altText}
+      width={width}
+      height={height}
     />
   );
 };
