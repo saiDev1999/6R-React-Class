@@ -11,22 +11,30 @@ import ProfileComponent from "./components/profile/profileComponent";
 import CustomImage from "./components/image/customImage";
 import Heading1 from "./components/headings/heading";
 import { bagData } from "./components/lists/fruitData";
+import Greeting from "./components/greeting/greeting";
+import React from "react";
+
+const students = ["Shiva", "Bhanu", "Priyatham"];
 const App = () => (
   <div>
-    {bagData.map((eachBag) => {
-      return (
-        <div>
-          <CustomImage
-            source={eachBag.source}
-            altText="bag"
-            width={100}
-            height={100}
-          />
-          <Heading1 title={eachBag.name} />
-        </div>
-      );
-    })}
+    {/* {students.map((eachStudent, index) => (
+      <React.Fragment key={index}>
+        <Greeting>
+          <Card>{eachStudent}</Card>
+        </Greeting>
+      </React.Fragment>
+    ))} */}
+    <CustomButton text="hello world" bgColor={"green"} width={100} />
   </div>
 );
 
 export default App;
+
+const Card = (prop) => {
+  return (
+    <>
+      <h4>Good morning {prop.children}</h4>
+      <h4>How was the weather today ?</h4>
+    </>
+  );
+};

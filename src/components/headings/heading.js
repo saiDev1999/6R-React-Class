@@ -1,5 +1,6 @@
 const Heading1 = (prop) => {
-  const { title = "default" } = prop;
+  let { title = "default" } = prop;
+  title = "hello";
   return <h1>{title}</h1>;
 };
 export default Heading1;
