@@ -1,32 +1,7 @@
-Children Prop :
+External css :
+External module : we will create .module.css file , we will the add the styles and import in the targerted component and use via variable
 
-Children is also way to communicate from parent component to the children component, but here we will encapsulate jsx or text content or component as a content for the child component
-
-ex: <Greeting name="ravi >
-
-<h4>Good morning ravi</h4>
-<h4>How are you feeling today ?</h4>
-</Greeting>
-
-<Greeting>
-How are you ?
-</Greeting>
-
-<Greeting>
-<Card>
-ravi
-</Card>
-</Greeting>
-
-note : By using the children we can nest the components (Reusability of jsx or content or component)
-
-To receive the children content we need use prop.children in the child component
-
-Ways to style the React App
-
-1. Inline styling or Object styling <h1 style="color:red" > </h1> <h1 style={{color:"red"}} > </h1>
-2. External Css Styling : create a external css file (overall app or individual components or set of components), import and use in the targetted component
-3. External module Styling : create a external .module.css file (we use in individual component by importing via variable)
+npm :
 
 External Css frameworks styling
 
@@ -36,22 +11,21 @@ External Css frameworks styling
 4. Ant design
 5. Material UI ....
 
-3 Goats 3 Lions are there River Point 1 --> River Point 2
+to install the bootstarp :
 
-one boat
-boat can carry upto 2
-if lion count is greater than goat count , lion will eat goat
+1. CDN link
+2. Boostrap code in the code and relative path
+3. Using npm
 
-Topics :
+Topics:
 
-1. Children prop in react
-2. Children prop different ways to access
-3. How to apply styles to react application
+1. External module css
+2. Bootstrap and react boostrap
+3. Custom component creation
 
-Tasks:
+Tasks :
 
-1. Repeat the Class
-2. Design the layout which contains Header , Cards . Footer
-3. Ipl teams in the card
-4. Children prop usage in react
-5. Difference between .js .jsx and .tsx
+4. Repeat the class
+5. Based on the ipl team topies , show the progress bar using react bootstrap
+6. Show highest to lowest based tropies or prices (ipl teams)
+7. Table, List, corousel custom components using react boostrap
