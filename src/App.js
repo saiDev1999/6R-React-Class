@@ -18,14 +18,44 @@ import style from "./App.module.css";
 import CustomAccordion from "./components/boostrap/accordion";
 import MyComponent from "./components/boostrap/my-component";
 import CustomSpinner from "./components/spinner/custom-spinner";
+import CustomList from "./components/customList/custom-list";
 
 const students = ["Shiva", "Bhanu", "Priyatham"];
+const vegetable = ["tomato", "potato"];
+const scientist = ["lin", "einstein"];
+const iplTeams = ["mumbai", "chennai"];
+
+const Item = "Biryani";
+const ingredients = ["Rice", "Masalas", "Spices", "Onions", "Oil"];
+const instructions = [
+  "Switch on the stove",
+  "Take a cooker",
+  "Add Oil",
+  "Fry onions",
+  "Add spices",
+  "Cook for 2 mins",
+  "Add Rice",
+  "Add water and cook for 20 mins",
+  "Eat the biryani",
+];
 const App = () => (
   <div>
-    <CustomSpinner color={"red"} />
-    <MyComponent />
-    {/* <CustomAccordion  /> */}
-    {/* <Card /> */}
+    <Heading1 title={"Fruites"} />
+    <CustomList list={["apple", "watermelon"]} />
+    <Heading1 title={"Students"} />
+    <CustomList list={students} />
+    <Heading1 title={"Vegetables"} />
+    <CustomList list={vegetable} />
+    <Heading1 title={"Sceientist"} />
+    <CustomList list={scientist} />
+    <Heading1 title={"Iplteams"} />
+    <CustomList list={iplTeams} />
+
+    <Heading1 title={Item} />
+    <Heading1 title={"Ingredeients required to cook" + Item} />
+    <CustomList list={ingredients} />
+    <Heading1 title={"Instructions required to cook" + Item} />
+    <CustomList list={instructions} />
   </div>
 );
 
