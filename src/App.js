@@ -19,6 +19,8 @@ import CustomAccordion from "./components/boostrap/accordion";
 import MyComponent from "./components/boostrap/my-component";
 import CustomSpinner from "./components/spinner/custom-spinner";
 import CustomList from "./components/customList/custom-list";
+import ConditionalRendering from "./components/conditional-rendering/condition";
+import CustomClassButton from "./components/class-components/button";
 
 const students = ["Shiva", "Bhanu", "Priyatham"];
 const vegetable = ["tomato", "potato"];
@@ -40,7 +42,9 @@ const instructions = [
 ];
 const App = () => (
   <div>
-    <Heading1 title={"Fruites"} />
+    <CustomClassButton />
+    {/* <ConditionalRendering /> */}
+    {/* <Heading1 title={"Fruites"} />
     <CustomList list={["apple", "watermelon"]} />
     <Heading1 title={"Students"} />
     <CustomList list={students} />
@@ -55,7 +59,7 @@ const App = () => (
     <Heading1 title={"Ingredeients required to cook" + Item} />
     <CustomList list={ingredients} />
     <Heading1 title={"Instructions required to cook" + Item} />
-    <CustomList list={instructions} />
+    <CustomList list={instructions} /> */}
   </div>
 );
 
