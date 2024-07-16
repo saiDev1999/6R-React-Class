@@ -21,6 +21,8 @@ import CustomSpinner from "./components/spinner/custom-spinner";
 import CustomList from "./components/customList/custom-list";
 import ConditionalRendering from "./components/conditional-rendering/condition";
 import CustomClassButton from "./components/class-components/button";
+import SubsribeComponent from "./components/class-components/subscribe-button";
+import TodoComponent from "./components/class-components/todo";
 
 const students = ["Shiva", "Bhanu", "Priyatham"];
 const vegetable = ["tomato", "potato"];
@@ -42,7 +44,9 @@ const instructions = [
 ];
 const App = () => (
   <div>
-    <CustomClassButton />
+    <TodoComponent />
+    {/* <SubsribeComponent /> */}
+    {/* <CustomClassButton /> */}
     {/* <ConditionalRendering /> */}
     {/* <Heading1 title={"Fruites"} />
     <CustomList list={["apple", "watermelon"]} />
