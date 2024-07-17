@@ -23,6 +23,10 @@ import ConditionalRendering from "./components/conditional-rendering/condition";
 import CustomClassButton from "./components/class-components/button";
 import SubsribeComponent from "./components/class-components/subscribe-button";
 import TodoComponent from "./components/class-components/todo";
+import Counter from "./components/class-components/counter";
+import SquareComponent from "./components/class-components/square-task";
+import IplTeams from "./components/class-components/iplTeams";
+import FetchExample from "./components/class-components/fetchExample";
 
 const students = ["Shiva", "Bhanu", "Priyatham"];
 const vegetable = ["tomato", "potato"];
@@ -44,7 +48,11 @@ const instructions = [
 ];
 const App = () => (
   <div>
-    <TodoComponent />
+    <FetchExample />
+    {/* <IplTeams />
+    <Counter />
+    <SquareComponent /> */}
+    {/* <TodoComponent /> */}
     {/* <SubsribeComponent /> */}
     {/* <CustomClassButton /> */}
     {/* <ConditionalRendering /> */}

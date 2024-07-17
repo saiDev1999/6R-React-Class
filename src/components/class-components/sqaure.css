@@ -1,0 +1,17 @@
+
+
+
+
+
+.sqaure-card-highlight{
+    width: 100px;
+    height: 100px;
+    background-color: cadetblue;
+    margin: 10px;
+}
+.sqaure-card-not-highlight{
+    width: 100px;
+    height: 100px;
+    background-color:blueviolet;
+    margin: 10px;
+}
