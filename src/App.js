@@ -27,6 +27,7 @@ import Counter from "./components/class-components/counter";
 import SquareComponent from "./components/class-components/square-task";
 import IplTeams from "./components/class-components/iplTeams";
 import FetchExample from "./components/class-components/fetchExample";
+import RepiceList from "./components/class-components/recipes-list";
 
 const students = ["Shiva", "Bhanu", "Priyatham"];
 const vegetable = ["tomato", "potato"];
@@ -48,7 +49,8 @@ const instructions = [
 ];
 const App = () => (
   <div>
-    <FetchExample />
+    <RepiceList />
+    {/* <FetchExample /> */}
     {/* <IplTeams />
     <Counter />
     <SquareComponent /> */}

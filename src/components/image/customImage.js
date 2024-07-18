@@ -1,8 +1,8 @@
 const CustomImage = (prop) => {
-  const { source, altText, width, height } = prop;
+  const { source, altText = "Default text", width, height } = prop;
   return (
     <img
-      class="image"
+      className="image"
       src={source}
       alt={altText}
       width={width}
