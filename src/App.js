@@ -28,6 +28,9 @@ import SquareComponent from "./components/class-components/square-task";
 import IplTeams from "./components/class-components/iplTeams";
 import FetchExample from "./components/class-components/fetchExample";
 import RepiceList from "./components/class-components/recipes-list";
+import MountingComponent from "./components/class-components/mounting/mounting";
+import UpdatingComponent from "./components/class-components/updating/updating";
+import UnMounting from "./components/class-components/unmounting/unmounting";
 
 const students = ["Shiva", "Bhanu", "Priyatham"];
 const vegetable = ["tomato", "potato"];
@@ -49,7 +52,10 @@ const instructions = [
 ];
 const App = () => (
   <div>
-    <RepiceList />
+    <UnMounting />
+    {/* <UpdatingComponent /> */}
+    {/* <MountingComponent myColor={"yellow"} /> */}
+    {/* <RepiceList /> */}
     {/* <FetchExample /> */}
     {/* <IplTeams />
     <Counter />

@@ -1,27 +1,37 @@
-Axios will also returns the promise
+Earth :
+Human cycle :
 
-syntax: axios.get(URL).then(response=>console.log(response))
+1. Born stage
+2. Survival stage
+3. Expiry stage
 
-componentDidMount : It is method in react lifecycle Mounting phase , which causes the side effects in our react class based components
+Dom :
+Life cycle of a class components
 
-examples of side effects are:
+1. Mounting stage or phase : Whenever components inserted inside the dom , we can call this as Mounting stage , (JSX inserted in the dom)
 
-1. Http calls (api calls)
-2. Dom manipulations
-3. Event listeners
-4. Timers (setInterval, setTimeout)
+4 methods :
 
-Topics :
+1. Render : render is a method which inserts the jsx inside the dom
+2. constructor : constructor is used to create and initial the state and also for event binding
+3. getDerivedStateFromProps : This method is used to initial the state based on the props , This method static method
+4. componentDidMount : this method is used to perform the side effects in the class based component in the mounting
+   This will execute only once in a lifecycle
+   side effects : Http calls, dom manipulations, event listeners, timers
 
-1. Fetch async and await version
-2. Error handling try/catch/finally usage
-3. Axios http call (products/recipes)
-4. ComponentDidMount method
+Note: All methods were auto-invoking methods
 
-Tasks:
+2. Updating stage : whenever components or elements updated inside the dom by the user events , This refers to Updating stage
 
-1. Repeat the class
-2. Display in the table , give name, instructions, ingredients etc as a columns
-3. Using Country api (https://restcountries.com/v3.1/all), Show all the countries Official names
-4. How to do Error handling in react
-5. Api status codes
+1. Render : Here it will execute to show the updated layout
+1. GetDerivedStateFromProps : If the prop from parent changes based on the props we can update the state
+
+1. Unmounting stage : Whenever components or elements removed from the dom , this stage refers to unmounting stage
+
+1. ComponentDidUpdate : This method is used perform sideEffects in the class based components in the updating
+
+side effects : Http calls, dom manipulations, event listeners, timers
+
+4. shouldComponentUpdate : It will decide whether the component needs to update or restricct
+
+5. getSnapShotBeforeUpdate : It will give the snap of the component data befor being updated in the dom
