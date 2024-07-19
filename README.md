@@ -35,3 +35,22 @@ side effects : Http calls, dom manipulations, event listeners, timers
 4. shouldComponentUpdate : It will decide whether the component needs to update or restricct
 
 5. getSnapShotBeforeUpdate : It will give the snap of the component data befor being updated in the dom
+
+Topics :
+
+1. Life cycle methods introduction
+2. Mounting phase
+3. Updating phase
+4. Unmounting phase
+
+Exercises :
+What is component life cycles
+What is the purpose of life cycles
+What are the three stages of a component life cycle
+What does mounting means?
+What does updating means
+What does unmounting means?
+What is the most common built-in mounting life cycle method?
+What are the mounting life cycle methods?
+What are the updating life cycle methods?
+What is the unmounting life cycle method?
