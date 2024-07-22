@@ -1,56 +1,82 @@
-Earth :
-Human cycle :
+Note : Whenever parent component re-renders all the child components will gets re-rendering even though there is no change in child components
 
-1. Born stage
-2. Survival stage
-3. Expiry stage
+Pure component : Pure component skips the unnecessary renders of the components until unless its state or prop changes
 
-Dom :
-Life cycle of a class components
+Whenever we are pure component performance will increases
 
-1. Mounting stage or phase : Whenever components inserted inside the dom , we can call this as Mounting stage , (JSX inserted in the dom)
+pure component is provided react itself
 
-4 methods :
+pure component must used only in a class based components
 
-1. Render : render is a method which inserts the jsx inside the dom
-2. constructor : constructor is used to create and initial the state and also for event binding
-3. getDerivedStateFromProps : This method is used to initial the state based on the props , This method static method
-4. componentDidMount : this method is used to perform the side effects in the class based component in the mounting
-   This will execute only once in a lifecycle
-   side effects : Http calls, dom manipulations, event listeners, timers
+pure component must extends from react
 
-Note: All methods were auto-invoking methods
+pure component contains the shouldComponentUpdate life cycle, it ensures the changes in the state and props , if anything changes shouldComponentUpdate returns true (by default), else returns false
 
-2. Updating stage : whenever components or elements updated inside the dom by the user events , This refers to Updating stage
+Difference between class and functional :
 
-1. Render : Here it will execute to show the updated layout
-1. GetDerivedStateFromProps : If the prop from parent changes based on the props we can update the state
+1. Render is used class components
+2. setState is used in class components
+3. extends is only used in class components
+4. this keyword is only used in class components
+5. pure used in class components
+6. All life cycle methods only used in class components
 
-1. Unmounting stage : Whenever components or elements removed from the dom , this stage refers to unmounting stage
+Drawbacks class based components :
 
-1. ComponentDidUpdate : This method is used perform sideEffects in the class based components in the updating
+1. Boiler plate code is more
+2. Debugging and maintainence will gets difficult
+3. Code will be splitted into different lifecycles
+4. Code will be splitted based on the life cyles stages
 
-side effects : Http calls, dom manipulations, event listeners, timers
+Stateless components : A component being used only for Presentational layer (UI)
+StateFull components : A component being used only for Container layer (Funtional)
 
-4. shouldComponentUpdate : It will decide whether the component needs to update or restricct
+Hooks : Hooks are simple js functions, It lets us use the state and other react features without using the classes
 
-5. getSnapShotBeforeUpdate : It will give the snap of the component data befor being updated in the dom
+react features -> Life cycle methods
+
+Hooks were introduced as 16.8 version in react functional component in 2018
+
+They let you use state and other React features without writing a class. Instead of Classes, one can use Hooks in the Functional component as this is a much easier way of managing the state. Hooks can only be used in functional components, not in-class components.
+
+Rules of using Hooks :
+
+1. Hooks can only be used in functional components, not in-class components.
+2. Hooks must always call at the top of the funtional components
+3. Hooks must be imported from react itself (import {useState} from "react")
+4. Hooks cannot be used in conditions , loops and inside the binded functions
+5. Hooks must always start with "use" keyword
+
+Examples of hooks :
+
+1. useState
+2. useEffect
+3. useRef
+4. useContext
+5. useReducer
+6. useMemo
+7. useCallback ...
+
+we can also design the custom hooks (ex: useFetch, useCounter)
+custom were designed by using react inbuilt hooks
+
+Hooks will follow DRY principle
 
 Topics :
 
-1. Life cycle methods introduction
-2. Mounting phase
-3. Updating phase
-4. Unmounting phase
+1. Pure component
+2. Stateless and statefull components
+3. Difference between class and funtional
+4. Drawbacks of class components
+5. Hooks introduction and rules of hooks
 
-Exercises :
-What is component life cycles
-What is the purpose of life cycles
-What are the three stages of a component life cycle
-What does mounting means?
-What does updating means
-What does unmounting means?
-What is the most common built-in mounting life cycle method?
-What are the mounting life cycle methods?
-What are the updating life cycle methods?
-What is the unmounting life cycle method?
+Tasks:
+
+1. Repeat the class
+2. Observe the life cycle behaviour when we have child components
+3. Document the todays topics
+4. Hit the api and show data in cards (class based components)
+5. Try to implement the search functionality for same users
+
+https://jsonplaceholder.typicode.com/users
+https://fakestoreapi.com/products ()

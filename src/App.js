@@ -31,6 +31,7 @@ import RepiceList from "./components/class-components/recipes-list";
 import MountingComponent from "./components/class-components/mounting/mounting";
 import UpdatingComponent from "./components/class-components/updating/updating";
 import UnMounting from "./components/class-components/unmounting/unmounting";
+import Parent from "./components/class-components/purecomponent/parent";
 
 const students = ["Shiva", "Bhanu", "Priyatham"];
 const vegetable = ["tomato", "potato"];
@@ -52,7 +53,8 @@ const instructions = [
 ];
 const App = () => (
   <div>
-    <UnMounting />
+    <Parent />
+    {/* <UnMounting /> */}
     {/* <UpdatingComponent /> */}
     {/* <MountingComponent myColor={"yellow"} /> */}
     {/* <RepiceList /> */}
