@@ -32,6 +32,8 @@ import MountingComponent from "./components/class-components/mounting/mounting";
 import UpdatingComponent from "./components/class-components/updating/updating";
 import UnMounting from "./components/class-components/unmounting/unmounting";
 import Parent from "./components/class-components/purecomponent/parent";
+import UseStateExample1 from "./components/hooks/useState/useStateEx1";
+import UsetStateExample2 from "./components/hooks/useState/useStateExample2";
 
 const students = ["Shiva", "Bhanu", "Priyatham"];
 const vegetable = ["tomato", "potato"];
@@ -53,7 +55,9 @@ const instructions = [
 ];
 const App = () => (
   <div>
-    <Parent />
+    <UsetStateExample2 />
+    {/* <UseStateExample1 /> */}
+    {/* <Parent /> */}
     {/* <UnMounting /> */}
     {/* <UpdatingComponent /> */}
     {/* <MountingComponent myColor={"yellow"} /> */}
