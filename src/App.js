@@ -34,6 +34,7 @@ import UnMounting from "./components/class-components/unmounting/unmounting";
 import Parent from "./components/class-components/purecomponent/parent";
 import UseStateExample1 from "./components/hooks/useState/useStateEx1";
 import UsetStateExample2 from "./components/hooks/useState/useStateExample2";
+import ShowGreeting from "./components/hooks/useState/useStateEx-3";
 
 const students = ["Shiva", "Bhanu", "Priyatham"];
 const vegetable = ["tomato", "potato"];
@@ -55,7 +56,8 @@ const instructions = [
 ];
 const App = () => (
   <div>
-    <UsetStateExample2 />
+    <ShowGreeting />
+    {/* <UsetStateExample2 /> */}
     {/* <UseStateExample1 /> */}
     {/* <Parent /> */}
     {/* <UnMounting /> */}
