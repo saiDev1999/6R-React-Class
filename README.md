@@ -84,6 +84,15 @@ case 3 : No dependency array useEffect(()=>{})
 
 useEffect will continuoulsy executes whenever state or prop changes (it goes to infinite loop)
 
+case 4 : Callback function returns the another function (Component will unmount)
+
+useEffect(()=>{
+return ()=>{
+//Component will unmount
+Here we will prevent memory leaks with in the application
+}
+},[])
+
 Tasks :
 
 1. Repeat the class
@@ -97,3 +106,45 @@ Topics :
 1. UseState examples
 2. UseEffect introduction
 3. UseEffect examples
+
+Forms :
+
+2 ways to handle forms in react
+
+1. Uncontrolled components : Forms control will not be part of react , it will controlled by dom
+   useRef is used to handle dom control
+   Only overall validation at one time is possible, field validations not possible
+
+2. Controlled components : Forms control will be part of react
+   Input data or states controlled by the react itself
+   useState is used to handle react control
+   field validation is possible in controlled components
+
+   useRef :
+   useRef is a react functional based hook , It serves
+
+   1. Directly accessing the dom
+   2. To preserve the previous values
+   3. It doesn't cause re-render when updated
+
+steps for uncontrolled components :
+
+1. Take a form in a react functional component
+2. use useRef hook to give access to the each input with the dom
+3. attach the reference with the inputs using ref attribute for the inputs
+4. onSubmit of form we can collect the user entered data by using reference
+   (reference.current.value)
+
+Topics:
+
+1.  UseEffect unMounting
+2.  Forms introduction
+3.  Uncontrolled forms
+4.  Basic validations and error notations
+
+Tasks:
+
+1.  Repeat the class
+2.  Try regex for the samsung policy form (5 fields)
+3.  Registration forms (email,password,mobile,name)(local storage)
+4.  Login api test
