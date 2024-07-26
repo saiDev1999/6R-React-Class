@@ -37,6 +37,7 @@ import UsetStateExample2 from "./components/hooks/useState/useStateExample2";
 import ShowGreeting from "./components/hooks/useState/useStateEx-3";
 import UseEffectEx1 from "./components/hooks/useEffect/useEffectEx1";
 import UncontrolledForm from "./components/forms/uncontrolled/uncontrolled-form";
+import ControlledForm from "./components/forms/controlled/controlled-form";
 
 const students = ["Shiva", "Bhanu", "Priyatham"];
 const vegetable = ["tomato", "potato"];
@@ -58,7 +59,8 @@ const instructions = [
 ];
 const App = () => (
   <div>
-    <UncontrolledForm />
+    <ControlledForm />
+    {/* <UncontrolledForm /> */}
     {/* <UseEffectEx1 /> */}
     {/* <ShowGreeting /> */}
     {/* <UsetStateExample2 /> */}
