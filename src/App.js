@@ -38,6 +38,8 @@ import ShowGreeting from "./components/hooks/useState/useStateEx-3";
 import UseEffectEx1 from "./components/hooks/useEffect/useEffectEx1";
 import UncontrolledForm from "./components/forms/uncontrolled/uncontrolled-form";
 import ControlledForm from "./components/forms/controlled/controlled-form";
+import WeatherComponent from "./components/weather/weather";
+import NavigationStack from "./navigation/navigation";
 
 const students = ["Shiva", "Bhanu", "Priyatham"];
 const vegetable = ["tomato", "potato"];
@@ -57,44 +59,6 @@ const instructions = [
   "Add water and cook for 20 mins",
   "Eat the biryani",
 ];
-const App = () => (
-  <div>
-    <ControlledForm />
-    {/* <UncontrolledForm /> */}
-    {/* <UseEffectEx1 /> */}
-    {/* <ShowGreeting /> */}
-    {/* <UsetStateExample2 /> */}
-    {/* <UseStateExample1 /> */}
-    {/* <Parent /> */}
-    {/* <UnMounting /> */}
-    {/* <UpdatingComponent /> */}
-    {/* <MountingComponent myColor={"yellow"} /> */}
-    {/* <RepiceList /> */}
-    {/* <FetchExample /> */}
-    {/* <IplTeams />
-    <Counter />
-    <SquareComponent /> */}
-    {/* <TodoComponent /> */}
-    {/* <SubsribeComponent /> */}
-    {/* <CustomClassButton /> */}
-    {/* <ConditionalRendering /> */}
-    {/* <Heading1 title={"Fruites"} />
-    <CustomList list={["apple", "watermelon"]} />
-    <Heading1 title={"Students"} />
-    <CustomList list={students} />
-    <Heading1 title={"Vegetables"} />
-    <CustomList list={vegetable} />
-    <Heading1 title={"Sceientist"} />
-    <CustomList list={scientist} />
-    <Heading1 title={"Iplteams"} />
-    <CustomList list={iplTeams} />
-
-    <Heading1 title={Item} />
-    <Heading1 title={"Ingredeients required to cook" + Item} />
-    <CustomList list={ingredients} />
-    <Heading1 title={"Instructions required to cook" + Item} />
-    <CustomList list={instructions} /> */}
-  </div>
-);
+const App = () => <NavigationStack />;
 
 export default App;

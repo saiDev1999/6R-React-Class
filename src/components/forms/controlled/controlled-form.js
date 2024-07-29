@@ -4,6 +4,12 @@ import ProfileComponent from "../../profile/profileComponent";
 function ControlledForm() {
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
+
+  const [formData, setFormData] = useState({
+    username: "",
+    password: "",
+  });
+
   const [usernameError, setUserNameError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
   const [userData, setUserData] = useState({});
@@ -11,10 +17,11 @@ function ControlledForm() {
 
   const submitHandler = (event) => {
     event.preventDefault();
+    console.log(formData);
 
-    if (!usernameError && !passwordError) {
-      sucesssSubmit(username, password);
-    }
+    // if (!usernameError && !passwordError) {
+    //   sucesssSubmit(username, password);
+    // }
   };
 
   const sucesssSubmit = async (username, password) => {
@@ -50,29 +57,38 @@ function ControlledForm() {
     } catch (err) {}
   };
 
-  const userNameHandler = (event) => {
-    const userEnteredValue = event.target.value;
-    setUserName(userEnteredValue);
-    console.log(userEnteredValue, "Username entering....");
-    if (validate(userEnteredValue)) {
-      setUserNameError(true);
-    } else {
-      setUserNameError(false);
-    }
-  };
-  const passwordHandler = (event) => {
-    const userEnteredPassword = event.target.value;
-    setPassword(userEnteredPassword);
-    console.log(userEnteredPassword, "Password entering....");
-    if (validate(userEnteredPassword)) {
-      setPasswordError(true);
-    } else {
-      setPasswordError(false);
-    }
-  };
+  // const userNameHandler = (event) => {
+  //   const userEnteredValue = event.target.value;
+  //   setUserName(userEnteredValue);
+  //   console.log(userEnteredValue, "Username entering....");
+  //   if (validate(userEnteredValue)) {
+  //     setUserNameError(true);
+  //   } else {
+  //     setUserNameError(false);
+  //   }
+  // };
+  // const passwordHandler = (event) => {
+  //   const userEnteredPassword = event.target.value;
+  //   setPassword(userEnteredPassword);
+  //   console.log(userEnteredPassword, "Password entering....");
+  //   if (validate(userEnteredPassword)) {
+  //     setPasswordError(true);
+  //   } else {
+  //     setPasswordError(false);
+  //   }
+  // };
 
   const validate = (value) => {
     return value.length > 15;
+  };
+  const formHandler = (event) => {
+    const { value, name } = event.target;
+    console.log(value, name);
+    const updatedFormData = {
+      ...formData,
+      [event.target.name]: event.target.value,
+    };
+    setFormData(updatedFormData);
   };
 
   return (
@@ -95,9 +111,9 @@ function ControlledForm() {
               className="form-control"
               id="email"
               placeholder="Enter email"
-              name="email"
-              value={username}
-              onChange={userNameHandler}
+              name="username"
+              value={formData.username}
+              onChange={formHandler}
             />
             {usernameError && (
               <span style={{ color: "red" }}>
@@ -114,9 +130,9 @@ function ControlledForm() {
               className="form-control"
               id="pwd"
               placeholder="Enter password"
-              name="pswd"
-              value={password}
-              onChange={passwordHandler}
+              name="password"
+              value={formData.password}
+              onChange={formHandler}
             />
             {passwordError && (
               <span style={{ color: "red" }}>
