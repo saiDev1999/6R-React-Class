@@ -1,42 +1,38 @@
-Navigations :
+useParams :
+useParams is hook in react router dom , which extracts the dynamic url paramaeters
 
-React is a library which creates UI
+There are 2 ways to redirect the page url
 
-Data fetching , navigations
+1. Using Link component
+2. useNavigate hook (program redirections)
 
-React Router Dom : Using react-router-dom we will enable navigations in the react applications
+http://localhost:3000/doctors/new
+http://localhost:3000/doctors/old
 
-npm i react-router-dom
+Outlet: its a component provided by the react router dom , it tells where to render the child components inside the parent route
 
-Navigation are of 2 ways
+Topics:
 
-1. Static navigations
-2. Dynamic navigations
+1. Dynamic routings
+2. UseParams
+3. useNavigate
+4. ways of redirections
+5. nested routing
 
-Static navigations
-
-1. Home screen /
-2. About screen /about
-3. Setting screen /setting
-4. Blog screen /blog
-
-https://www.zomato.com -> Base URL
-/hyderabad -> Dynamic URL
-/mindspace-social-hitech-city/ -> Dynamic URL
-
-https://www.zomato.com/ -> Base URL
-investor-relations -> Static URL
-
-Topics :
-
-1. Navigations in react using react-router-dom
-2. Link component and NavLink for redirections
-3. Static routing
-4. Dynamic routing introduction
-5. No page routing
-
-Tasks :
+Tasks:
 
 1. Repeat the class
-2. Main screen, Menu screen, locations, login , registation
-3. Load the content in the path
+2. Style recipe listing screen and recipe detail screen
+3. Show the recipes in the dropdown , show the selected recipe in the UI
+4. Random joke generator in react
+
+20 age , 30 age , 40 age . 60 age
+
+they need to cross the bridge
+
+1min 20 age
+2min 30 age
+5min 40 age
+10min 60 age
+
+17 Mins bridge will be collapsed
