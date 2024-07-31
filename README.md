@@ -1,38 +1,50 @@
-useParams :
-useParams is hook in react router dom , which extracts the dynamic url paramaeters
+State mangement : State management refers managing the application data with in component or across the whole application
 
-There are 2 ways to redirect the page url
+2 ways :
 
-1. Using Link component
-2. useNavigate hook (program redirections)
+1. Local state management -> useState , useReducer
+2. Global state management -> useContext + useState
 
-http://localhost:3000/doctors/new
-http://localhost:3000/doctors/old
+1.props
+2.context api --> small and medium scaled application
+3.redux --> for large applications
 
-Outlet: its a component provided by the react router dom , it tells where to render the child components inside the parent route
+2.1 props
 
-Topics:
+Prop drilling : When data needs to be shared accross the different components which were deeply nested,data needs to forward for each level of component tree to reach the final component
 
-1. Dynamic routings
-2. UseParams
-3. useNavigate
-4. ways of redirections
-5. nested routing
+Drawbacks :
 
-Tasks:
+1. Component reuability will decrease
+2. Every component must be included even though we are not using data in that particular component
+3. readability and maintenance will decreases
+4. scability will be difficult
+
+2.1 context api
+
+context api is a way to manage the state in the react applications globally
+
+steps :
+
+1. Identify the components which we needs to share the data (globally or set of selected components) (select app.js or navigation.js)
+2. create a context using createContext method provided by the react globally
+3. wrap the global components using selected context . provider and pass value prop (where data needs to be shared across the components)
+4. select the component where data needs to be consumed using useContext hook in react
+5. useContext will receive the createdContext and returns the global data provided in the value prop
+
+useContext : its a hook where we can achieve global state management in react funtional components(it will consumes the data provided in the value prop)
 
 1. Repeat the class
-2. Style recipe listing screen and recipe detail screen
-3. Show the recipes in the dropdown , show the selected recipe in the UI
-4. Random joke generator in react
+2. implement search funtionality for recipes (by using api )
+   https://dummyjson.com/recipes/search?q=Margherita
+3. Implement the dark and light mode in the app
+4. change name globally, give the input in the setting, based on the new name update across the application
+5. what is debouncing and throattling in js
+6. why we need go for link component instead of anchor tags in react
 
-20 age , 30 age , 40 age . 60 age
+Topics :
 
-they need to cross the bridge
-
-1min 20 age
-2min 30 age
-5min 40 age
-10min 60 age
-
-17 Mins bridge will be collapsed
+1. State management
+2. Prop drilling in react
+3. Context api
+4. useContext hook

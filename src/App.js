@@ -12,7 +12,7 @@ import CustomImage from "./components/image/customImage";
 import Heading1 from "./components/headings/heading";
 import { bagData } from "./components/lists/fruitData";
 import Greeting from "./components/greeting/greeting";
-import React from "react";
+import React, { createContext, useState } from "react";
 import Card from "./components/card/card";
 import style from "./App.module.css";
 import CustomAccordion from "./components/boostrap/accordion";
@@ -59,6 +59,28 @@ const instructions = [
   "Add water and cook for 20 mins",
   "Eat the biryani",
 ];
-const App = () => <NavigationStack />;
+
+export const DataContext = createContext();
+
+const App = () => {
+  const [username, setUserName] = useState("sumanth");
+  const [darkMode, setDarkMode] = useState(true);
+
+  const changeUsername = (newName) => {
+    setUserName(newName);
+  };
+
+  return (
+    <DataContext.Provider
+      value={{
+        username,
+        darkMode,
+        changeUsername,
+      }}
+    >
+      <NavigationStack />;
+    </DataContext.Provider>
+  );
+};
 
 export default App;
