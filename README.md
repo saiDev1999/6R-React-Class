@@ -15,7 +15,7 @@ Prop drilling : When data needs to be shared accross the different components wh
 
 Drawbacks :
 
-1. Component reuability will decrease
+1. Component reusability will decrease
 2. Every component must be included even though we are not using data in that particular component
 3. readability and maintenance will decreases
 4. scability will be difficult
@@ -48,3 +48,12 @@ Topics :
 2. Prop drilling in react
 3. Context api
 4. useContext hook
+
+[{id:1,name:"biryani"}]
+
+step 1:
+
+1. Take a dropdown (dummy values)
+2. useEffect and useState to fetch and store the data (ds)
+3. <option value={eachRecipe.name} >{eachRecipe.name}</option>
+4. after selecting extract the selected value using event.target.value(id)

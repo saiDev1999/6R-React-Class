@@ -65,9 +65,14 @@ export const DataContext = createContext();
 const App = () => {
   const [username, setUserName] = useState("sumanth");
   const [darkMode, setDarkMode] = useState(true);
+  const [counter, setCounter] = useState(100);
 
   const changeUsername = (newName) => {
     setUserName(newName);
+  };
+
+  const changeCount = (value) => {
+    setCounter(counter + value);
   };
 
   return (
@@ -76,6 +81,8 @@ const App = () => {
         username,
         darkMode,
         changeUsername,
+        counter,
+        changeCount,
       }}
     >
       <NavigationStack />;
