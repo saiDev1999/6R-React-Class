@@ -57,3 +57,10 @@ step 1:
 2. useEffect and useState to fetch and store the data (ds)
 3. <option value={eachRecipe.name} >{eachRecipe.name}</option>
 4. after selecting extract the selected value using event.target.value(id)
+
+Tasks :
+
+1. Research on 10 apis
+2. Country api show in dropdown and show the country data
+3. Random dog facts
+4. mini dictionary
