@@ -1,66 +1,71 @@
-State mangement : State management refers managing the application data with in component or across the whole application
+useReducer hook in react :
 
-2 ways :
+useReducer which is used for the state managemnent in functional components , create and manage state
 
-1. Local state management -> useState , useReducer
-2. Global state management -> useContext + useState
+useReducer alone can be only used for local state management
 
-1.props
-2.context api --> small and medium scaled application
-3.redux --> for large applications
+if we use useReducer with useContext we can achieve global complex state managements
 
-2.1 props
+useReducer is used to apply complex logics for our complex states
 
-Prop drilling : When data needs to be shared accross the different components which were deeply nested,data needs to forward for each level of component tree to reach the final component
+useReducer syntax :
 
-Drawbacks :
+useReducer accepts 2 arguments
 
-1. Component reusability will decrease
-2. Every component must be included even though we are not using data in that particular component
-3. readability and maintenance will decreases
-4. scability will be difficult
+1. reducer function
+2. initial state (complex state)
 
-2.1 context api
+useReducer(()=>{},{})
 
-context api is a way to manage the state in the react applications globally
+useReducer will return an array contains 2 elements
 
-steps :
+1. current state
+2. dispatch function
 
-1. Identify the components which we needs to share the data (globally or set of selected components) (select app.js or navigation.js)
-2. create a context using createContext method provided by the react globally
-3. wrap the global components using selected context . provider and pass value prop (where data needs to be shared across the components)
-4. select the component where data needs to be consumed using useContext hook in react
-5. useContext will receive the createdContext and returns the global data provided in the value prop
+const state={
+totalTickets:100,
+bookedTickets:20,
+currentAvailableTickets: 80
+}
 
-useContext : its a hook where we can achieve global state management in react funtional components(it will consumes the data provided in the value prop)
+Technical terms :
+
+1.  action : action tells what to happen to the state or data , action is the object ex : INCREAMENT_SALARY, DECREMENT_SALARY, BOOK_TICKET, CANCEL_TICKET, HOLD_TICKET
+
+ex : BOOK_TICKET , no of tickets :6
+
+const ticketAction = {
+type: BOOK_TICKET,
+payload:6
+}
+
+const ticketAction = {
+type: CHANGE_NAME,
+payload:"Kalki"
+}
+
+2.  reducer function : reducer function is a pure function , this function will accept action and state as a parameter , based on the actions corresponding state changes will be done
+
+return {...state,bookedTickets:state.bookedTickets+ticketAction.payload}
+
+{
+totalTickets:100,
+bookedTickets:26,
+currentAvailableTickets: 74
+}
+
+3.dispatch function : This function dispatches the action performed by the user , dispatch function will accept the action
+
+Tasks:
 
 1. Repeat the class
-2. implement search funtionality for recipes (by using api )
-   https://dummyjson.com/recipes/search?q=Margherita
-3. Implement the dark and light mode in the app
-4. change name globally, give the input in the setting, based on the new name update across the application
-5. what is debouncing and throattling in js
-6. why we need go for link component instead of anchor tags in react
+2. Global counter using useReducer + useContext (https://medium.com/suyeonme/using-usecontext-and-usereducer-together-lets-create-redux-like-global-state-in-react-87470e3ce7fa)
+3. Todo using useReducer hook
+4. what is the difference between useState and useReducer
+5. What is the difference between .js .jsx .tsx
+6. how we can create a npm package (2million)
 
-Topics :
+Topics:
 
-1. State management
-2. Prop drilling in react
-3. Context api
-4. useContext hook
-
-[{id:1,name:"biryani"}]
-
-step 1:
-
-1. Take a dropdown (dummy values)
-2. useEffect and useState to fetch and store the data (ds)
-3. <option value={eachRecipe.name} >{eachRecipe.name}</option>
-4. after selecting extract the selected value using event.target.value(id)
-
-Tasks :
-
-1. Research on 10 apis
-2. Country api show in dropdown and show the country data
-3. Random dog facts
-4. mini dictionary
+1. UseReducer hook introduction
+2. UseReducer examples (ticketing example)
