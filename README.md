@@ -78,3 +78,10 @@ Recipe maker : (useContext+useState)
 4. detail screen -> favourite recipe
 5. all favourite recipes must be in separate screen
 6. user can also remove favourite recipe
+
+Project s:
+
+1. Recipe maker
+2. Weather app (search by city and fetch by current location)
+3. Country finder and Currency converter
+4. Task mangement
