@@ -27,9 +27,7 @@ const ShowGreeting = () => {
   const ageHandler = () => {
     setAge(age + 1);
   };
-  const mouseTrack = () => {
-    console.log("Mouse moving...");
-  };
+
   const greetingHandler = () => {
     const greetString = greetingFn();
     setGreeting(greetString);

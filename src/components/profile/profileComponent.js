@@ -1,5 +1,4 @@
 import Heading1, { Heading2 } from "../headings/heading";
-import CustomImage from "../image/customImage";
 const ProfileComponent = () => {
   const profileDetails = {
     name: "kumar",

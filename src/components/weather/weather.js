@@ -5,7 +5,7 @@ function WeatherComponent() {
   const apiKey = "YOUR_API_KEY";
   const lat = "LATITUDE_VALUE";
   const lon = "LONGITUDE_VALUE";
-  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+  // const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`;
   useEffect(() => {
     initGeolocation();
   }, []);

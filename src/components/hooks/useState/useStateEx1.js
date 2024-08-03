@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const UseStateExample1 = () => {
   const [login, setLogin] = useState(false);
-  const [count, setCount] = useState(10);
+  const [count] = useState(10);
 
   const loginHandler = () => {
     // setLogin((login) => !login);

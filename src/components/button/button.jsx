@@ -3,7 +3,7 @@ import style from "../../App.module.css"
 
 const CustomButton = (prop) => {
 
-  const {text,bgColor,width=100}=prop
+  const {text,}=prop
 
  
   return <button className={style.button} >{text}</button>;

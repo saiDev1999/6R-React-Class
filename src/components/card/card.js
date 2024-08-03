@@ -1,6 +1,4 @@
-import CustomAccordion from "../boostrap/accordion";
 import CustomProgressBar from "../boostrap/progress-bar";
-import CustomButton from "../button/button";
 import CustomSpinner from "../spinner/custom-spinner";
 import "./card.css";
 
@@ -39,7 +37,6 @@ const Card = () => {
       <CustomSpinner />
 
       <CustomProgressBar scale={calculatePercentage(product.price)} />
-      {/* <CustomButton text="See More" /> */}
     </div>
   );
 };

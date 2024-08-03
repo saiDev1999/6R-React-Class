@@ -2,18 +2,15 @@ import React, { useState } from "react";
 import ProfileComponent from "../../profile/profileComponent";
 
 function ControlledForm() {
-  const [username, setUserName] = useState("");
-  const [password, setPassword] = useState("");
-
   const [formData, setFormData] = useState({
     username: "",
     password: "",
   });
 
-  const [usernameError, setUserNameError] = useState(false);
-  const [passwordError, setPasswordError] = useState(false);
-  const [userData, setUserData] = useState({});
-  const [list, setList] = useState([]);
+  const [usernameError] = useState(false);
+  const [passwordError] = useState(false);
+  const [userData] = useState({});
+  const [list] = useState([]);
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -22,39 +19,6 @@ function ControlledForm() {
     // if (!usernameError && !passwordError) {
     //   sucesssSubmit(username, password);
     // }
-  };
-
-  const sucesssSubmit = async (username, password) => {
-    try {
-      const response = await fetch("https://dummyjson.com/auth/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          username,
-          password,
-        }),
-      });
-      const finalResponse = await response.json();
-
-      if (finalResponse.message) {
-        alert(finalResponse.message);
-      } else {
-        console.log(finalResponse, "final response");
-
-        const totalname = finalResponse.firstName + finalResponse.lastName;
-
-        setUserName("");
-        setPassword("");
-        // setUserData(finalResponse);
-
-        const userExists = list.includes(totalname);
-        if (userExists) {
-          alert("User alreasy exists");
-        } else {
-          setList([...list, totalname]);
-        }
-      }
-    } catch (err) {}
   };
 
   // const userNameHandler = (event) => {
@@ -78,9 +42,6 @@ function ControlledForm() {
   //   }
   // };
 
-  const validate = (value) => {
-    return value.length > 15;
-  };
   const formHandler = (event) => {
     const { value, name } = event.target;
     console.log(value, name);

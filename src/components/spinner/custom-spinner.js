@@ -1,4 +1,4 @@
-import { DNA, Audio } from "react-loader-spinner";
+import { Audio } from "react-loader-spinner";
 
 const CustomSpinner = (prop) => {
   const { color = "green" } = prop;

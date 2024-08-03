@@ -22,7 +22,7 @@ const UsetStateExample2 = () => {
 
   const deleteHandler = (index) => {
     console.log(index, todos);
-    const finalState = todos.filter((_, ind) => ind != index);
+    const finalState = todos.filter((_, ind) => ind !== index);
     setTodos(finalState);
   };
   return (

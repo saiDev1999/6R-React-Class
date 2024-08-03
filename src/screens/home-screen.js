@@ -1,10 +1,8 @@
 import { useContext } from "react";
-import NavBar from "../components/navbar/navbar";
-import WeatherComponent from "../components/weather/weather";
-import { DataContext } from "../App";
-import RecipeFinder from "../components/recipeFinder/recipe-finder";
-import { RecipeContext } from "../navigation/navigation";
 import { useNavigate } from "react-router-dom";
+import { DataContext } from "../App";
+import NavBar from "../components/navbar/navbar";
+import { RecipeContext } from "../navigation/navigation";
 
 const HomeScreen = () => {
   const { username, counter } = useContext(DataContext);
