@@ -69,3 +69,12 @@ Topics:
 
 1. UseReducer hook introduction
 2. UseReducer examples (ticketing example)
+
+Recipe maker : (useContext+useState)
+
+1. Header , Footer , content in the cards
+2. Listing the recipes in the cards (view recipe,favourite recipe) in the home screen
+3. view recipe -> detail screen
+4. detail screen -> favourite recipe
+5. all favourite recipes must be in separate screen
+6. user can also remove favourite recipe

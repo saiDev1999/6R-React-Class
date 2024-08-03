@@ -21,11 +21,6 @@ function WeatherComponent() {
   function success(position) {
     console.log(position.coords.longitude);
     console.log(position.coords.latitude);
-
-    // fetchWeather(position.coords.latitude, position.coords.longitude);
-
-    //   document.getElementById('long').value = position.coords.longitude;
-    //   document.getElementById('lat').value = position.coords.latitude
   }
 
   const fetchWeather = async (lat, lon) => {

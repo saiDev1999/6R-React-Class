@@ -3,11 +3,24 @@ import NavBar from "../components/navbar/navbar";
 import WeatherComponent from "../components/weather/weather";
 import { DataContext } from "../App";
 import RecipeFinder from "../components/recipeFinder/recipe-finder";
+import { RecipeContext } from "../navigation/navigation";
+import { useNavigate } from "react-router-dom";
 
 const HomeScreen = () => {
   const { username, counter } = useContext(DataContext);
+  const { recipeList, addFavouriteDishHandler } = useContext(RecipeContext);
+  const navigate = useNavigate();
+  console.log(recipeList, "recipeLits");
   const changeHandler = (event) => {
     console.log(event.target.value);
+  };
+
+  const addFoodHandler = (eachFood) => {
+    addFavouriteDishHandler(eachFood);
+  };
+
+  const goToFavoriteHandler = () => {
+    navigate("favouriteRecipe");
   };
   return (
     <>
@@ -15,13 +28,25 @@ const HomeScreen = () => {
       <h3>
         Welcome {username} {counter}
       </h3>
-      <RecipeFinder />
+      {recipeList &&
+        recipeList.length > 0 &&
+        recipeList.map((each) => {
+          return (
+            <>
+              <h4>{each.name}</h4>
+              <img src={each.image} width={100} height={100} />
+              <button>View recipe</button>
 
-      {/* <select onChange={changeHandler}>
-        <option value={"Dish 1"}>Dish 1</option>
-        <option value={"Dish 2"}>Dish 2</option>
-      </select> */}
-      <WeatherComponent />
+              {each.existsInFavorite ? (
+                <button onClick={goToFavoriteHandler}>go to favourite</button>
+              ) : (
+                <button onClick={() => addFoodHandler(each)}>
+                  Add to favourite{" "}
+                </button>
+              )}
+            </>
+          );
+        })}
     </>
   );
 };
