@@ -1,87 +1,58 @@
-useReducer hook in react :
+Memorization in react js :
 
-useReducer which is used for the state managemnent in functional components , create and manage state
+Memorization is a optimisation technique in react without re-calculating expensive calculations of the functions by caching the results when ever same inputs provided
 
-useReducer alone can be only used for local state management
+3 ways in react js for Memorization:
 
-if we use useReducer with useContext we can achieve global complex state managements
+1. React.memo() : pure component in functional component (without re-rendering the child whenever same props or state being loaded)
 
-useReducer is used to apply complex logics for our complex states
+React.memo is a HOC :
 
-useReducer syntax :
+HOC : Higher-order-component : This is the pattern where a function can take the component as argument and return the enhanced component,This pattern makes re-use the functional logics
 
-useReducer accepts 2 arguments
+common functionality can be designed as a HOC, This can be called in multiple components without writing functional logics multiple times
 
-1. reducer function
-2. initial state (complex state)
+2. useMemo()
+3. useCallback()
 
-useReducer(()=>{},{})
+profile data :
 
-useReducer will return an array contains 2 elements
+useMemo is a hook in functional components which memorizes the result returned by the function when same inputs were given
 
-1. current state
-2. dispatch function
+useMemo syntax : it will accept 2 args
 
-const state={
-totalTickets:100,
-bookedTickets:20,
-currentAvailableTickets: 80
-}
+1. callback funtion
+2. dependency array
 
-Technical terms :
+const totalAmount=useMemo(()=>{
+return qtyOfRasagulla*100+qtyOfDrink*100
+},[qtyOfRasagulla,qtyOfDrink])
 
-1.  action : action tells what to happen to the state or data , action is the object ex : INCREAMENT_SALARY, DECREMENT_SALARY, BOOK_TICKET, CANCEL_TICKET, HOLD_TICKET
+useCallback : useCallback is a hook in functional components which memorizes the function when same inputs were given
 
-ex : BOOK_TICKET , no of tickets :6
+useCallback syntax : it will accept 2 args
 
-const ticketAction = {
-type: BOOK_TICKET,
-payload:6
-}
+1. callback funtion
+2. dependency array
 
-const ticketAction = {
-type: CHANGE_NAME,
-payload:"Kalki"
-}
+useCallback(()=>{
+setCount(count+1)
+},[count])
 
-2.  reducer function : reducer function is a pure function , this function will accept action and state as a parameter , based on the actions corresponding state changes will be done
+React 19 version
 
-return {...state,bookedTickets:state.bookedTickets+ticketAction.payload}
+Tasks :
 
-{
-totalTickets:100,
-bookedTickets:26,
-currentAvailableTickets: 74
-}
-
-3.dispatch function : This function dispatches the action performed by the user , dispatch function will accept the action
-
-Tasks:
-
+0. complete the recipe maker project by eod
 1. Repeat the class
-2. Global counter using useReducer + useContext (https://medium.com/suyeonme/using-usecontext-and-usereducer-together-lets-create-redux-like-global-state-in-react-87470e3ce7fa)
-3. Todo using useReducer hook
-4. what is the difference between useState and useReducer
-5. What is the difference between .js .jsx .tsx
-6. how we can create a npm package (2million)
+2. Design a hoc for counter
+3. 3 Examples of hoc
+4. 3 examples of react.memo(), where to use , where not to use
+5. react compiler changes (19)
 
 Topics:
 
-1. UseReducer hook introduction
-2. UseReducer examples (ticketing example)
-
-Recipe maker : (useContext+useState)
-
-1. Header , Footer , content in the cards
-2. Listing the recipes in the cards (view recipe,favourite recipe) in the home screen
-3. view recipe -> detail screen
-4. detail screen -> favourite recipe
-5. all favourite recipes must be in separate screen
-6. user can also remove favourite recipe
-
-Project s:
-
-1. Recipe maker
-2. Weather app (search by city and fetch by current location)
-3. Country finder and Currency converter
-4. Task mangement
+1. Memorization in react
+2. HOC
+3. React.memo
+4. useMemo and useCallback introduction

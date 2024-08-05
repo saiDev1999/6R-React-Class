@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import CustomSpinner from "../components/spinner/custom-spinner";
 import CustomList from "../components/customList/custom-list";
 import "./recipe.css";
+import withProfileData from "../components/hoc/withProfile";
 
 const RecipeDetail = () => {
   const { recipeId } = useParams();
@@ -58,4 +59,4 @@ const RecipeDetail = () => {
   );
 };
 
-export default RecipeDetail;
+export default withProfileData(RecipeDetail);
