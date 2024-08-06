@@ -1,12 +1,14 @@
 import "./button.css"
 import style from "../../App.module.css"
+import React from "react";
 
 const CustomButton = (prop) => {
+  console.log("button re-renderToString...",prop.text)
 
-  const {text,bgColor,width=100}=prop
+  const {text,onPress}=prop
 
  
-  return <button className={style.button} >{text}</button>;
+  return <button  style={{backgroundColor:"greenyellow"}} onClick={onPress}  >{text}</button>;
 };
 
-export default CustomButton;
+export default React.memo(CustomButton);

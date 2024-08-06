@@ -2,6 +2,7 @@ import { useContext } from "react";
 import NavBar from "../components/navbar/navbar";
 import { DataContext } from "../App";
 import ToggleFunction from "../components/reactmemo/parent";
+import DishListing from "../components/class-components/memorization/dishListing";
 
 const SettingScreen = () => {
   const { username, darkMode, changeUsername, changeCount, counter } =
@@ -15,7 +16,8 @@ const SettingScreen = () => {
   return (
     <>
       <NavBar />
-      <ToggleFunction />
+      <DishListing />
+      {/* <ToggleFunction /> */}
       {/* <h3>
         Welcome {username} {counter}
       </h3>
