@@ -22,3 +22,5 @@ common functionality :
 2. UseEffect for side effect
 
 ex: useAxios(url) , data,loading,error
+
+1.Repeat the class 2. Recipe maker 3. weather app as discussed in the class
