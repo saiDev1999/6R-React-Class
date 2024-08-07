@@ -3,6 +3,7 @@ import NavBar from "../components/navbar/navbar";
 import { DataContext } from "../App";
 import ToggleFunction from "../components/reactmemo/parent";
 import DishListing from "../components/class-components/memorization/dishListing";
+import UseMemo from "../components/class-components/memorization/useMemo";
 
 const SettingScreen = () => {
   const { username, darkMode, changeUsername, changeCount, counter } =
@@ -16,7 +17,8 @@ const SettingScreen = () => {
   return (
     <>
       <NavBar />
-      <DishListing />
+      <UseMemo />
+      {/* <DishListing /> */}
       {/* <ToggleFunction /> */}
       {/* <h3>
         Welcome {username} {counter}

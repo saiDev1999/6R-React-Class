@@ -1,58 +1,24 @@
-Memorization in react js :
+custom hooks :
 
-Memorization is a optimisation technique in react without re-calculating expensive calculations of the functions by caching the results when ever same inputs provided
+1. To reuse the common functionality we can design the custom hook, it will share the common functional logics to the app
+2. custom hooks will always starts with use Keyword
+3. custom hooks will be designed by using react predefined hooks
+4. custom hooks were simple js functions
 
-3 ways in react js for Memorization:
+ex: useCounter, useAxios
 
-1. React.memo() : pure component in functional component (without re-rendering the child whenever same props or state being loaded)
+common functionality :
 
-React.memo is a HOC :
+1. initial state using useState
+2. handler for changing the state
 
-HOC : Higher-order-component : This is the pattern where a function can take the component as argument and return the enhanced component,This pattern makes re-use the functional logics
+DRY : DONT REPEAT YOURSELF
 
-common functionality can be designed as a HOC, This can be called in multiple components without writing functional logics multiple times
+data fetching :
 
-2. useMemo()
-3. useCallback()
+common functionality :
 
-profile data :
+1. initial state using useState
+2. UseEffect for side effect
 
-useMemo is a hook in functional components which memorizes the result returned by the function when same inputs were given
-
-useMemo syntax : it will accept 2 args
-
-1. callback funtion
-2. dependency array
-
-const totalAmount=useMemo(()=>{
-return qtyOfRasagulla*100+qtyOfDrink*100
-},[qtyOfRasagulla,qtyOfDrink])
-
-useCallback : useCallback is a hook in functional components which memorizes the function when same inputs were given
-
-useCallback syntax : it will accept 2 args
-
-1. callback funtion
-2. dependency array
-
-useCallback(()=>{
-setCount(count+1)
-},[count])
-
-React 19 version
-
-Tasks :
-
-0. complete the recipe maker project by eod
-1. Repeat the class
-2. Design a hoc for counter
-3. 3 Examples of hoc
-4. 3 examples of react.memo(), where to use , where not to use
-5. react compiler changes (19)
-
-Topics:
-
-1. Memorization in react
-2. HOC
-3. React.memo
-4. useMemo and useCallback introduction
+ex: useAxios(url) , data,loading,error

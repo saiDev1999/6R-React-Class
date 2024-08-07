@@ -5,6 +5,7 @@ import { DataContext } from "../App";
 import RecipeFinder from "../components/recipeFinder/recipe-finder";
 import { RecipeContext } from "../navigation/navigation";
 import { useNavigate } from "react-router-dom";
+import InstagramHeart from "../components/heart/heart";
 
 const HomeScreen = () => {
   const { username, counter } = useContext(DataContext);
@@ -36,12 +37,15 @@ const HomeScreen = () => {
               <h4>{each.name}</h4>
               <img src={each.image} width={100} height={100} />
               <button>View recipe</button>
+              <InstagramHeart />
 
               {each.existsInFavorite ? (
-                <button onClick={goToFavoriteHandler}>go to favourite</button>
+                <button onClick={goToFavoriteHandler}>
+                  go to favourite <InstagramHeart />
+                </button>
               ) : (
                 <button onClick={() => addFoodHandler(each)}>
-                  Add to favourite{" "}
+                  Add to favourite
                 </button>
               )}
             </>
