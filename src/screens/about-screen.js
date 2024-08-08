@@ -3,14 +3,16 @@ import withProfileData from "../components/hoc/withProfile";
 import NavBar from "../components/navbar/navbar";
 import CustomSpinner from "../components/spinner/custom-spinner";
 import { useAxios } from "../customHooks/useAxios";
+import { useLatLon } from "../customHooks/useLatLon";
 
 const AboutScreen = (props) => {
   // const { username } = props.data?.data || {};
   console.log(props);
 
   const [data, error, loading] = useAxios();
+  const [coords, errors] = useLatLon();
 
-  console.log(data);
+  console.log(coords, "coordscoords");
 
   if (error) {
     return (

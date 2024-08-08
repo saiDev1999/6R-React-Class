@@ -24,3 +24,9 @@ common functionality :
 ex: useAxios(url) , data,loading,error
 
 1.Repeat the class 2. Recipe maker 3. weather app as discussed in the class
+
+<!--
+fake producsts :
+1. hit the api
+2. show in ui in the form of table
+3.  -->

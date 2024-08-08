@@ -1,4 +1,5 @@
 import NavBar from "../components/navbar/navbar";
+import TableData from "../components/tableData/tableData";
 import UseReducer from "../components/useReducer/useReducer";
 
 const BlogScreen = () => {
@@ -6,7 +7,7 @@ const BlogScreen = () => {
     <>
       <NavBar />
       <h3>Welcome to Blog Screen </h3>
-      <UseReducer />
+      <TableData />
     </>
   );
 };
